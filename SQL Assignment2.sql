@@ -3,18 +3,11 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE courses (
-    course_id INT,
-    course_code VARCHAR(15),
-    course_title VARCHAR(150),
-    category VARCHAR(60),
-    duration_hours INT,
-    fee DECIMAL(10,2),
-    discount_percentage DECIMAL(5,2),
-    delivery_mode VARCHAR(20),
-    start_date DATE,
-    class_start_time TIME,
-    class_end_time TIME,
-    created_at DATETIME
+    course_id INT,course_code VARCHAR(15), course_title VARCHAR(150),
+    category VARCHAR(60),duration_hours INT, fee DECIMAL(10,2),
+    discount_percentage DECIMAL(5,2),delivery_mode VARCHAR(20),
+    start_date DATE,class_start_time TIME,
+    class_end_time TIME,created_at DATETIME
 );
 
 -- Check table structure
@@ -30,32 +23,14 @@ SHOW CREATE TABLE courses;
 -- CRS-I1: Insert Java using explicit column list
 
 INSERT INTO courses (
-    course_id,
-    course_code,
-    course_title,
-    category,
-    duration_hours,
-    fee,
-    discount_percentage,
-    delivery_mode,
-    start_date,
-    class_start_time,
-    class_end_time,
-    created_at
+    course_id,course_code,course_title,category,
+    duration_hours,fee,discount_percentage,delivery_mode,
+    start_date,class_start_time,class_end_time,created_at
 )
 VALUES (
-    1,
-    'CRS-JAVA-101',
-    'Java Fundamentals',
-    'Programming',
-    40,
-    6500.00,
-    10.00,
-    'CLASSROOM',
-    '2026-12-01',
-    '09:00:00',
-    '11:00:00',
-    '2026-11-19 09:00:00'
+    1,'CRS-JAVA-101','Java Fundamentals','Programming',
+    40,6500.00, 10.00,'CLASSROOM','2026-12-01',
+    '09:00:00','11:00:00','2026-11-19 09:00:00'
 );
 
 
@@ -63,158 +38,68 @@ VALUES (
 -- Using one multi-row INSERT
 
 INSERT INTO courses (
-    course_id,
-    course_code,
-    course_title,
-    category,
-    duration_hours,
-    fee,
-    discount_percentage,
-    delivery_mode,
-    start_date,
-    class_start_time,
-    class_end_time,
-    created_at
+    course_id,course_code,course_title,category,
+    duration_hours,fee,discount_percentage,delivery_mode,
+    start_date,class_start_time,class_end_time, created_at
 )
 VALUES
 (
-    2,
-    'CRS-SQL-102',
-    'MySQL Essentials',
-    'Database',
-    32,
-    4500.50,
-    5.00,
-    'ONLINE',
-    '2026-12-05',
-    '10:00:00',
-    '12:00:00',
+    2,'CRS-SQL-102','MySQL Essentials','Database',32,4500.50,
+    5.00,'ONLINE','2026-12-05','10:00:00','12:00:00',
     '2026-11-19 09:15:00'
 ),
 (
-    3,
-    'CRS-WEB-103',
-    'Web Development',
-    'Web Development',
-    60,
-    8500.00,
-    12.50,
-    'HYBRID',
-    '2027-01-10',
-    '14:00:00',
-    '16:00:00',
-    '2026-11-19 09:30:00'
+    3,'CRS-WEB-103','Web Development', 'Web Development',60,
+    8500.00,12.50,'HYBRID','2027-01-10','14:00:00',
+    '16:00:00','2026-11-19 09:30:00'
 );
 
 
 -- CRS-I3: Insert Testing and Python
 
 INSERT INTO courses (
-    course_id,
-    course_code,
-    course_title,
-    category,
-    duration_hours,
-    fee,
-    discount_percentage,
-    delivery_mode,
-    start_date,
-    class_start_time,
-    class_end_time,
-    created_at
+    course_id,course_code,course_title,category,
+    duration_hours,fee,discount_percentage,delivery_mode,
+    start_date,class_start_time,class_end_time,created_at
 )
 VALUES
 (
-    4,
-    'CRS-TST-104',
-    'Software Testing',
-    'Testing',
-    24,
-    3500.75,
-    0.00,
-    'ONLINE',
-    '2026-12-15',
-    '15:00:00',
-    '17:00:00',
-    '2026-11-19 09:45:00'
+    4,'CRS-TST-104','Software Testing','Testing', 24,
+    3500.75,0.00,'ONLINE', '2026-12-15','15:00:00',
+    '17:00:00','2026-11-19 09:45:00'
 ),
 (
-    5,
-    'CRS-PYT-105',
-    'Python Basics',
-    'Programming',
-    36,
-    5500.25,
-    7.50,
-    'CLASSROOM',
-    '2027-01-05',
-    '09:30:00',
-    '11:30:00',
-    '2026-11-19 10:00:00'
+    5,'CRS-PYT-105', 'Python Basics', 'Programming',
+    36, 5500.25,7.50, 'CLASSROOM', '2027-01-05',
+    '09:30:00','11:30:00','2026-11-19 10:00:00'
 );
 
 
 -- Insert an additional course with fractional fee and discount
 
 INSERT INTO courses (
-    course_id,
-    course_code,
-    course_title,
-    category,
-    duration_hours,
-    fee,
-    discount_percentage,
-    delivery_mode,
-    start_date,
-    class_start_time,
-    class_end_time,
-    created_at
+    course_id,course_code,  course_title, category,duration_hours,
+    fee,discount_percentage,delivery_mode,start_date,
+    class_start_time,class_end_time, created_at
 )
 VALUES (
-    6,
-    'CRS-DS-106',
-    'Data Science',
-    'Data Science',
-    50,
-    7250.75,
-    8.25,
-    'ONLINE',
-    '2027-02-01',
-    '10:00:00',
-    '12:00:00',
-    '2026-11-19 10:15:00'
+    6,'CRS-DS-106','Data Science','Data Science',50,
+    7250.75, 8.25, 'ONLINE', '2027-02-01','10:00:00',
+    '12:00:00', '2026-11-19 10:15:00'
 );
 
 
 -- Insert a course starting at 08:30 and ending at 10:30
 
 INSERT INTO courses (
-    course_id,
-    course_code,
-    course_title,
-    category,
-    duration_hours,
-    fee,
-    discount_percentage,
-    delivery_mode,
-    start_date,
-    class_start_time,
-    class_end_time,
-    created_at
+    course_id,course_code, course_title,category,
+    duration_hours,fee,discount_percentage,delivery_mode,
+    start_date,class_start_time,class_end_time,created_at
 )
 VALUES (
-    7,
-    'CRS-JS-107',
-    'JavaScript Basics',
-    'Programming',
-    30,
-    3000.50,
-    5.50,
-    'CLASSROOM',
-    '2027-02-10',
-    '08:30:00',
-    '10:30:00',
-    '2026-11-19 10:30:00'
+    7,'CRS-JS-107','JavaScript Basics','Programming',
+    30,3000.50, 5.50, 'CLASSROOM', '2027-02-10','08:30:00',
+    '10:30:00','2026-11-19 10:30:00'
 );
 
 
@@ -276,19 +161,10 @@ USE cdg_hyd_jfs_060;
 -- INS-C1: Create instructors table
 
 CREATE TABLE instructors (
-    instructor_id INT,
-    instructor_code VARCHAR(12),
-    first_name VARCHAR(60),
-    last_name VARCHAR(60),
-    email VARCHAR(120),
-    specialization VARCHAR(100),
-    years_experience INT,
-    hourly_rate DECIMAL(8,2),
-    employment_type VARCHAR(20),
-    joined_on DATE,
-    work_start_time TIME,
-    work_end_time TIME,
-    created_at DATETIME
+    instructor_id INT,instructor_code VARCHAR(12), first_name VARCHAR(60),
+    last_name VARCHAR(60),email VARCHAR(120),specialization VARCHAR(100),
+    years_experience INT,hourly_rate DECIMAL(8,2),employment_type VARCHAR(20),
+    joined_on DATE,work_start_time TIME,work_end_time TIME,created_at DATETIME
 );
 
 -- Inspect table structure
@@ -302,109 +178,49 @@ SHOW CREATE TABLE instructors;
 -- INS-I1: Insert first instructor
 
 INSERT INTO instructors (
-    instructor_id,
-    instructor_code,
-    first_name,
-    last_name,
-    email,
-    specialization,
-    years_experience,
-    hourly_rate,
-    employment_type,
-    joined_on,
-    work_start_time,
-    work_end_time,
-    created_at
+    instructor_id,instructor_code,first_name, last_name,email,
+    specialization,years_experience,hourly_rate,employment_type,
+    joined_on, work_start_time, work_end_time,created_at
 )
 VALUES (
-    1,
-    'INS-JV-001',
-    'Kavya',
-    'Menon',
-    'kavya@example.com',
-    'Java',
-    8,
-    1500.50,
-    'FULL_TIME',
-    '2021-06-14',
-    '09:00:00',
-    '18:00:00',
-    '2026-11-19 09:00:00'
+    1,'INS-JV-001','Kavya','Menon','kavya@example.com','Java',
+    8,1500.50,'FULL_TIME','2021-06-14','09:00:00',
+    '18:00:00','2026-11-19 09:00:00'
 );
 
 
 -- INS-I2: Insert next two instructors using multi-row INSERT
 
 INSERT INTO instructors (
-    instructor_id,
-    instructor_code,
-    first_name,
-    last_name,
-    email,
-    specialization,
-    years_experience,
-    hourly_rate,
-    employment_type,
-    joined_on,
-    work_start_time,
-    work_end_time,
-    created_at
+    instructor_id,instructor_code,first_name,last_name,
+    email, specialization,years_experience,hourly_rate,
+    employment_type,joined_on,work_start_time,
+    work_end_time,created_at
 )
 VALUES
 (
-    2,
-    'INS-DB-002',
-    'Ritesh',
-    'Kumar',
-    'ritesh@example.com',
-    'Databases',
-    12,
-    1800.75,
-    'CONTRACT',
-    '2019-02-01',
-    '10:00:00',
-    '19:00:00',
-    '2026-11-19 09:15:00'
+    2, 'INS-DB-002','Ritesh','Kumar','ritesh@example.com',
+    'Databases',12,1800.75,'CONTRACT','2019-02-01', '10:00:00',
+    '19:00:00','2026-11-19 09:15:00'
 ),
 (
-    3,
-    'INS-WB-003',
-    'Farah',
-    'Ali',
-    'farah@example.com',
-    'Web Development',
-    5,
-    1200.00,
-    'PART_TIME',
-    '2023-08-21',
-    '14:00:00',
-    '18:00:00',
-    '2026-11-19 09:30:00'
+    3,'INS-WB-003','Farah','Ali','farah@example.com',
+    'Web Development',5,1200.00,'PART_TIME','2023-08-21','14:00:00',
+    '18:00:00','2026-11-19 09:30:00'
 );
 
 
 -- INS-I3: Insert remaining two instructors
 
 INSERT INTO instructors (
-    instructor_id,
-    instructor_code,
-    first_name,
-    last_name,
-    email,
-    specialization,
-    years_experience,
-    hourly_rate,
-    employment_type,
-    joined_on,
-    work_start_time,
-    work_end_time,
-    created_at
+    instructor_id,instructor_code, first_name,last_name,
+    email,specialization,years_experience, hourly_rate,
+    employment_type,joined_on,work_start_time,
+    work_end_time,created_at
 )
 VALUES
 (
-    4,
-    'INS-QA-004',
-    'Nitin',
+    4,'INS-QA-004','Nitin',
     'Bose',
     'nitin@example.com',
     'Software Testing',
@@ -470,34 +286,15 @@ VALUES (
 -- Insert instructor with decimal hourly rate
 
 INSERT INTO instructors (
-    instructor_id,
-    instructor_code,
-    first_name,
-    last_name,
-    email,
-    specialization,
-    years_experience,
-    hourly_rate,
-    employment_type,
-    joined_on,
-    work_start_time,
-    work_end_time,
-    created_at
+    instructor_id,instructor_code,first_name,last_name,
+    email, specialization, years_experience,hourly_rate,
+    employment_type,joined_on,work_start_time,
+    work_end_time,created_at
 )
 VALUES (
-    7,
-    'INS-AI-007',
-    'Sneha',
-    'Rao',
-    'sneha@example.com',
-    'Artificial Intelligence',
-    6,
-    2450.85,
-    'FULL_TIME',
-    '2024-03-15',
-    '10:00:00',
-    '18:00:00',
-    '2026-11-19 10:30:00'
+    7,'INS-AI-007','Sneha','Rao','sneha@example.com',
+    'Artificial Intelligence',6,2450.85,'FULL_TIME',
+    '2024-03-15','10:00:00', '18:00:00','2026-11-19 10:30:00'
 );
 
 
@@ -944,36 +741,15 @@ VALUES (
 -- for every column
 
 INSERT INTO shipments (
-    shipment_id,
-    tracking_number,
-    sender_name,
-    recipient_name,
-    destination_city,
-    package_weight_kg,
-    shipping_cost,
-    shipped_date,
-    shipped_time,
-    expected_delivery_date,
-    delivered_at,
-    shipment_status,
-    priority,
-    created_at
+    shipment_id, tracking_number, sender_name, recipient_name,
+    destination_city,package_weight_kg,shipping_cost,
+    shipped_date,shipped_time, expected_delivery_date,delivered_at,
+    shipment_status, priority,created_at
 )
 VALUES (
-    3,
-    'TRK26000003',
-    'Book Nest',
-    'Omar Ali',
-    'Kochi',
-    4.200,
-    220.00,
-    '2026-11-12',
-    '14:00:00',
-    '2026-11-17',
-    NULL,
-    'CREATED',
-    'NORMAL',
-    '2026-11-19 09:30:00'
+    3,'TRK26000003','Book Nest','Omar Ali', 'Kochi',
+    4.200,220.00, '2026-11-12', '14:00:00', '2026-11-17',
+    NULL,  'CREATED', 'NORMAL', '2026-11-19 09:30:00'
 );
 
 
@@ -981,89 +757,36 @@ VALUES (
 -- one multi-row INSERT statement
 
 INSERT INTO shipments (
-    shipment_id,
-    tracking_number,
-    sender_name,
-    recipient_name,
-    destination_city,
-    package_weight_kg,
-    shipping_cost,
-    shipped_date,
-    shipped_time,
-    expected_delivery_date,
-    delivered_at,
-    shipment_status,
-    priority,
-    created_at
+    shipment_id,tracking_number, sender_name, recipient_name,
+    destination_city, package_weight_kg, shipping_cost,shipped_date,
+    shipped_time,expected_delivery_date,delivered_at,
+    shipment_status,priority,created_at
 )
 VALUES
 (
-    4,
-    'TRK26000004',
-    'Green Foods',
-    'Meera Das',
-    'Hyderabad',
-    12.000,
-    550.50,
-    '2026-11-12',
-    '08:45:00',
-    '2026-11-15',
-    NULL,
-    'IN_TRANSIT',
-    'EXPRESS',
-    '2026-11-19 09:45:00'
+    4,'TRK26000004','Green Foods','Meera Das','Hyderabad',
+    12.000,550.50,'2026-11-12', '08:45:00','2026-11-15',
+    NULL,'IN_TRANSIT','EXPRESS','2026-11-19 09:45:00'
 ),
 (
-    5,
-    'TRK26000005',
-    'Test Sender',
-    'Test Receiver',
-    'Pune',
-    1.000,
-    100.25,
-    '2026-11-13',
-    '16:30:00',
-    '2026-11-16',
-    NULL,
-    'CANCELLED',
-    'NORMAL',
-    '2026-11-19 10:00:00'
+    5, 'TRK26000005','Test Sender', 'Test Receiver',
+    'Pune', 1.000, 100.25, '2026-11-13', '16:30:00', '2026-11-16',
+    NULL, 'CANCELLED', 'NORMAL', '2026-11-19 10:00:00'
 );
 
 
 -- Insert another shipment with package weight 0.750 kg
 
 INSERT INTO shipments (
-    shipment_id,
-    tracking_number,
-    sender_name,
-    recipient_name,
-    destination_city,
-    package_weight_kg,
-    shipping_cost,
-    shipped_date,
-    shipped_time,
-    expected_delivery_date,
-    delivered_at,
-    shipment_status,
-    priority,
-    created_at
+    shipment_id, tracking_number, sender_name, recipient_name,
+    destination_city,package_weight_kg,shipping_cost,shipped_date,
+    shipped_time,expected_delivery_date,delivered_at,shipment_status,
+    priority,created_at
 )
 VALUES (
-    6,
-    'TRK26000006',
-    'Fresh Mart',
-    'Rahul Kumar',
-    'Vijayawada',
-    0.750,
-    125.50,
-    '2026-11-14',
-    '12:00:00',
-    '2026-11-18',
-    NULL,
-    'CREATED',
-    'NORMAL',
-    '2026-11-19 10:15:00'
+    6,'TRK26000006','Fresh Mart','Rahul Kumar','Vijayawada',
+    0.750,125.50,'2026-11-14', '12:00:00', '2026-11-18',
+    NULL,'CREATED', 'NORMAL', '2026-11-19 10:15:00'
 );
 
 
@@ -1122,19 +845,10 @@ USE cdg_hyd_jfs_060;
 -- SUB-C1: Create subscriptions table
 
 CREATE TABLE subscriptions (
-    subscription_id INT,
-    subscription_code VARCHAR(16),
-    subscriber_name VARCHAR(120),
-    subscriber_email VARCHAR(120),
-    plan_name VARCHAR(60),
-    billing_cycle VARCHAR(20),
-    amount DECIMAL(10,2),
-    start_date DATE,
-    end_date DATE,
-    renewal_time TIME,
-    last_payment_at DATETIME,
-    auto_renew INT,
-    subscription_status VARCHAR(20),
+    subscription_id INT,subscription_code VARCHAR(16),subscriber_name VARCHAR(120),
+    subscriber_email VARCHAR(120),plan_name VARCHAR(60),billing_cycle VARCHAR(20),
+    amount DECIMAL(10,2),start_date DATE,end_date DATE,renewal_time TIME,
+    last_payment_at DATETIME,auto_renew INT,subscription_status VARCHAR(20),
     created_at DATETIME
 );
 
@@ -1149,214 +863,89 @@ SHOW CREATE TABLE subscriptions;
 -- SUB-I1: Insert first two subscriptions
 
 INSERT INTO subscriptions (
-    subscription_id,
-    subscription_code,
-    subscriber_name,
-    subscriber_email,
-    plan_name,
-    billing_cycle,
-    amount,
-    start_date,
-    end_date,
-    renewal_time,
-    last_payment_at,
-    auto_renew,
-    subscription_status,
-    created_at
+    subscription_id,subscription_code, subscriber_name, subscriber_email,
+    plan_name, billing_cycle, amount, start_date, end_date,renewal_time,
+    last_payment_at,auto_renew,subscription_status,created_at
 )
 VALUES
 (
-    1,
-    'SUB260001',
-    'Aarav Nair',
-    'aarav@example.com',
-    'Standard',
-    'MONTHLY',
-    499.00,
-    '2026-11-01',
-    '2026-11-30',
-    '01:00:00',
-    '2026-11-01 01:05:00',
-    1,
-    'ACTIVE',
-    '2026-11-19 09:00:00'
+    1,'SUB260001','Aarav Nair', 'aarav@example.com','Standard',
+    'MONTHLY',499.00,'2026-11-01','2026-11-30','01:00:00',
+    '2026-11-01 01:05:00',1,'ACTIVE','2026-11-19 09:00:00'
 ),
 (
-    2,
-    'SUB260002',
-    'Diya Shah',
-    'diya@example.com',
-    'Premium',
-    'YEARLY',
-    4999.50,
-    '2026-01-15',
-    '2027-01-14',
-    '02:00:00',
-    '2026-11-15 02:10:00',
-    1,
-    'ACTIVE',
-    '2026-11-19 09:15:00'
+    2,'SUB260002','Diya Shah','diya@example.com','Premium',
+    'YEARLY',4999.50,'2026-01-15', '2027-01-14','02:00:00',
+    '2026-11-15 02:10:00', 1, 'ACTIVE',  '2026-11-19 09:15:00'
 );
 
 
 -- SUB-I2: Insert SUB260003 with all columns explicitly supplied
 
 INSERT INTO subscriptions (
-    subscription_id,
-    subscription_code,
-    subscriber_name,
-    subscriber_email,
-    plan_name,
-    billing_cycle,
-    amount,
-    start_date,
-    end_date,
-    renewal_time,
-    last_payment_at,
-    auto_renew,
-    subscription_status,
-    created_at
+    subscription_id,subscription_code, subscriber_name,
+    subscriber_email,plan_name,billing_cycle,
+    amount,start_date,end_date,renewal_time,last_payment_at,
+    auto_renew,subscription_status, created_at
 )
 VALUES (
-    3,
-    'SUB260003',
-    'Kabir Rao',
-    'kabir@example.com',
-    'Basic',
-    'MONTHLY',
-    199.00,
-    '2026-11-10',
-    '2026-12-09',
-    '03:00:00',
-    '2026-11-10 03:05:00',
-    1,
-    'ACTIVE',
-    '2026-11-19 09:30:00'
+    3, 'SUB260003', 'Kabir Rao','kabir@example.com',
+    'Basic','MONTHLY',199.00,'2026-11-10',
+    '2026-12-09','03:00:00','2026-11-10 03:05:00',
+    1,'ACTIVE', '2026-11-19 09:30:00'
 );
 
 
 -- SUB-I3: Insert remaining two subscriptions
 
 INSERT INTO subscriptions (
-    subscription_id,
-    subscription_code,
-    subscriber_name,
-    subscriber_email,
-    plan_name,
-    billing_cycle,
-    amount,
-    start_date,
-    end_date,
-    renewal_time,
-    last_payment_at,
-    auto_renew,
-    subscription_status,
-    created_at
+    subscription_id,subscription_code, subscriber_name,
+    subscriber_email,plan_name,billing_cycle,amount,
+    start_date, end_date,renewal_time, last_payment_at,
+    auto_renew,subscription_status, created_at
 )
 VALUES
 (
-    4,
-    'SUB260004',
-    'Meera Bose',
-    'meera@example.com',
-    'Premium',
-    'QUARTERLY',
-    1399.75,
-    '2026-10-01',
-    '2026-12-31',
-    '04:00:00',
-    '2026-10-01 04:15:00',
-    0,
-    'PAUSED',
-    '2026-11-19 09:45:00'
+    4,'SUB260004', 'Meera Bose', 'meera@example.com',
+    'Premium', 'QUARTERLY', 1399.75, '2026-10-01',
+    '2026-12-31', '04:00:00', '2026-10-01 04:15:00',
+    0,'PAUSED','2026-11-19 09:45:00'
 ),
 (
-    5,
-    'SUB260005',
-    'Rohan Das',
-    'rohan@example.com',
-    'Standard',
-    'MONTHLY',
-    499.00,
-    '2026-08-01',
-    '2026-08-31',
-    '01:30:00',
-    '2026-08-01 01:35:00',
-    0,
-    'CANCELLED',
-    '2026-11-19 10:00:00'
+    5,'SUB260005', 'Rohan Das',  'rohan@example.com', 'Standard',
+    'MONTHLY',499.00, '2026-08-01', '2026-08-31', '01:30:00',
+    '2026-08-01 01:35:00', 0, 'CANCELLED', '2026-11-19 10:00:00'
 );
 
 
 -- Insert another subscription with decimal amount
 
 INSERT INTO subscriptions (
-    subscription_id,
-    subscription_code,
-    subscriber_name,
-    subscriber_email,
-    plan_name,
-    billing_cycle,
-    amount,
-    start_date,
-    end_date,
-    renewal_time,
-    last_payment_at,
-    auto_renew,
-    subscription_status,
-    created_at
+    subscription_id,subscription_code,subscriber_name,
+    subscriber_email, plan_name, billing_cycle,
+    amount, start_date, end_date, renewal_time,
+    last_payment_at, auto_renew, subscription_status,created_at
 )
 VALUES (
-    6,
-    'SUB260006',
-    'Ananya Rao',
-    'ananya@example.com',
-    'Premium',
-    'MONTHLY',
-    899.75,
-    '2026-11-15',
-    '2026-12-14',
-    '04:00:00',
-    '2026-11-15 04:05:00',
-    1,
-    'ACTIVE',
-    '2026-11-19 10:15:00'
+    6,'SUB260006', 'Ananya Rao', 'ananya@example.com',
+    'Premium','MONTHLY', 899.75, '2026-11-15',
+    '2026-12-14','04:00:00','2026-11-15 04:05:00',
+    1,'ACTIVE', '2026-11-19 10:15:00'
 );
 
 
 -- Insert subscription with renewal time 05:30:00
 
 INSERT INTO subscriptions (
-    subscription_id,
-    subscription_code,
-    subscriber_name,
-    subscriber_email,
-    plan_name,
-    billing_cycle,
-    amount,
-    start_date,
-    end_date,
-    renewal_time,
-    last_payment_at,
-    auto_renew,
-    subscription_status,
-    created_at
+    subscription_id, subscription_code,subscriber_name,
+    subscriber_email,plan_name, billing_cycle,amount,
+    start_date,end_date,renewal_time,last_payment_at,
+    auto_renew, subscription_status,created_at
 )
 VALUES (
-    7,
-    'SUB260007',
-    'Vikram Reddy',
-    'vikram@example.com',
-    'Basic',
-    'MONTHLY',
-    299.50,
-    '2026-11-18',
-    '2026-12-17',
-    '05:30:00',
-    '2026-11-18 05:35:00',
-    1,
-    'ACTIVE',
-    '2026-11-19 10:30:00'
+    7,'SUB260007','Vikram Reddy','vikram@example.com', 'Basic',
+    'MONTHLY', 299.50,'2026-11-18','2026-12-17','05:30:00',
+    '2026-11-18 05:35:00',1,'ACTIVE','2026-11-19 10:30:00'
 );
 
 
@@ -1419,20 +1008,11 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE events (
-    event_id INT,
-    event_code VARCHAR(15),
-    event_name VARCHAR(150),
-    venue VARCHAR(150),
-    city VARCHAR(80),
-    start_date DATE,
-    end_date DATE,
-    start_time TIME,
-    end_time TIME,
-    capacity INT,
-    registration_fee DECIMAL(10,2),
-    event_type VARCHAR(20),
-    event_status VARCHAR(20),
-    created_at DATETIME
+    event_id INT,event_code VARCHAR(15),event_name VARCHAR(150),
+    venue VARCHAR(150),city VARCHAR(80),start_date DATE,
+    end_date DATE,start_time TIME,end_time TIME,capacity INT,
+    registration_fee DECIMAL(10,2),event_type VARCHAR(20),
+    event_status VARCHAR(20),created_at DATETIME
 );
 
 DESCRIBE events;
@@ -1569,20 +1149,11 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE events (
-    event_id INT,
-    event_code VARCHAR(15),
-    event_name VARCHAR(150),
-    venue VARCHAR(150),
-    city VARCHAR(80),
-    start_date DATE,
-    end_date DATE,
-    start_time TIME,
-    end_time TIME,
-    capacity INT,
-    registration_fee DECIMAL(10,2),
-    event_type VARCHAR(20),
-    event_status VARCHAR(20),
-    created_at DATETIME
+    event_id INT,event_code VARCHAR(15), event_name VARCHAR(150),
+    venue VARCHAR(150),city VARCHAR(80),start_date DATE,
+    end_date DATE,start_time TIME,end_time TIME,capacity INT,
+    registration_fee DECIMAL(10,2), event_type VARCHAR(20),
+    event_status VARCHAR(20), created_at DATETIME
 );
 
 DESCRIBE events;
@@ -1719,20 +1290,13 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE restaurants (
-    restaurant_id INT,
-    restaurant_code VARCHAR(12),
-    restaurant_name VARCHAR(120),
-    cuisine_type VARCHAR(80),
-    city VARCHAR(80),
-    phone VARCHAR(15),
-    seating_capacity INT,
-    average_cost_for_two DECIMAL(10,2),
-    rating DECIMAL(3,2),
-    opening_time TIME,
-    closing_time TIME,
-    opened_date DATE,
-    last_review_at DATETIME,
-    opening_status VARCHAR(25)
+    restaurant_id INT, restaurant_code VARCHAR(12),
+    restaurant_name VARCHAR(120),cuisine_type VARCHAR(80),
+    city VARCHAR(80),phone VARCHAR(15),
+    seating_capacity INT,average_cost_for_two DECIMAL(10,2),
+    rating DECIMAL(3,2),opening_time TIME,
+    closing_time TIME,opened_date DATE,
+    last_review_at DATETIME, opening_status VARCHAR(25)
 );
 
 DESCRIBE restaurants;
@@ -1878,20 +1442,12 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE insurance_policies (
-    policy_id INT,
-    policy_number VARCHAR(14),
-    policyholder_name VARCHAR(120),
-    policy_type VARCHAR(20),
-    coverage_amount DECIMAL(14,2),
-    premium_amount DECIMAL(10,2),
-    start_date DATE,
-    end_date DATE,
-    payment_frequency VARCHAR(20),
-    payment_time TIME,
-    last_payment_at DATETIME,
-    nominee_name VARCHAR(120),
-    policy_status VARCHAR(20),
-    created_at DATETIME
+    policy_id INT,policy_number VARCHAR(14),policyholder_name VARCHAR(120),
+    policy_type VARCHAR(20),coverage_amount DECIMAL(14,2),
+    premium_amount DECIMAL(10,2), start_date DATE, end_date DATE,
+    payment_frequency VARCHAR(20), payment_time TIME,
+    last_payment_at DATETIME,nominee_name VARCHAR(120),
+    policy_status VARCHAR(20),created_at DATETIME
 );
 
 DESCRIBE insurance_policies;
@@ -2045,21 +1601,12 @@ USE cdg_hyd_jfs_060;
 -- A. CREATE TABLE
 
 CREATE TABLE job_postings (
-    job_id INT,
-    job_code VARCHAR(15),
-    job_title VARCHAR(150),
-    department VARCHAR(100),
-    location VARCHAR(100),
-    employment_type VARCHAR(20),
-    minimum_salary DECIMAL(12,2),
-    maximum_salary DECIMAL(12,2),
-    vacancies INT,
-    posted_date DATE,
-    closing_date DATE,
-    interview_start_time TIME,
-    interview_end_time TIME,
-    last_updated_at DATETIME,
-    job_status VARCHAR(20)
+    job_id INT, job_code VARCHAR(15),job_title VARCHAR(150),
+    department VARCHAR(100),location VARCHAR(100),
+    employment_type VARCHAR(20), minimum_salary DECIMAL(12,2),
+    maximum_salary DECIMAL(12,2),vacancies INT,posted_date DATE,
+    closing_date DATE,interview_start_time TIME,interview_end_time TIME,
+    last_updated_at DATETIME,job_status VARCHAR(20)
 );
 
 DESCRIBE job_postings;
@@ -2214,9 +1761,3 @@ WHERE job_code = 'JOB-JAVA-001';
 UPDATE job_postings
 SET last_updated_at = '2026-11-19 22:00:00'
 WHERE job_code = 'JOB-QA-002';
-
-
-
-
-
-
